@@ -1,3 +1,36 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/NewGame.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Tileset/BG.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/TileMap.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/TileMap.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 176.757 )
 
 [node name="NewGame" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 512.35, 300.006 )
+scale = Vector2( 0.51235, 0.524934 )
+texture = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="BG"]
+position = Vector2( -1000, -571.511 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 655384, 7, 0, 655386, 0, 0, 786450, 1, 0, 786452, 3, 0, 917510, 2, 0, 917514, 7, 0, 917516, 8, 0, 917518, 0, 0, 917522, 4, 0, 917523, 5, 0, 917524, 6, 0, 983044, 2, 0, 983046, 6, 0, 983060, 6, 0, 1048576, 2, 0, 1048578, 2, 0, 1048580, 5, 0, 1048581, 5, 0, 1048582, 6, 0, 1048594, 4, 0, 1048595, 5, 0, 1048596, 6, 0, 1179664, 9, 0 )
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="BG"]
+position = Vector2( 91.353, 463.621 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/Area2D"]
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]

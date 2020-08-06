@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metalmania-by-kevin-macleod-from-filmmusic-io.wav-b063b7653cb54985422fa284af00cd6a.sample"
+
+[deps]
+
+source_file="res://Asset/Music/metalmania-by-kevin-macleod-from-filmmusic-io.wav"
+dest_files=[ "res://.import/metalmania-by-kevin-macleod-from-filmmusic-io.wav-b063b7653cb54985422fa284af00cd6a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
