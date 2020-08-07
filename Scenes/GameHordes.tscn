@@ -1,0 +1,127 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Asset/Tileset/sfondo.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Tileset/stars_low_light.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Tileset/stars_low_light_1.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Tileset/stars_light_up.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=5]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame0_walk.png" type="Texture" id=6]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame3_walk.png" type="Texture" id=7]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame4_walk.png" type="Texture" id=8]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame2_walk.png" type="Texture" id=9]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame5_walk.png" type="Texture" id=10]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame6_walk.png" type="Texture" id=11]
+[ext_resource path="res://Asset/Tileset/Objects/Tree.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 30.4653
+height = 69.8185
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 105.098
+height = 150.391
+
+[node name="GameHordes" type="Node"]
+
+[node name="sfondo" type="Sprite" parent="."]
+position = Vector2( 4001.4, 571 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="stars_low_light" type="Sprite" parent="."]
+position = Vector2( 4001, 571 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="stars_low_light_1" type="Sprite" parent="."]
+position = Vector2( 4001, 571 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="stars_light_up" type="Sprite" parent="."]
+position = Vector2( 4001, 571 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 823.14, 1009.79 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+frames = SubResource( 1 )
+animation = "attack"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 1.62903, -153.128 )
+current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+
+[node name="TimerEnemy" type="Timer" parent="Player"]
+one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+rotation = -1.309
+scale = Vector2( 15, 2 )
+enabled = true
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 450.617, 963.114 )
+mode = 1
+gravity_scale = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 3 )
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2( 7482.78, 953.594 )
+mode = 1
+gravity_scale = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D2"]
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource( 3 )

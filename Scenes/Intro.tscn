@@ -28,7 +28,6 @@ texture = ExtResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-autoplay = true
 
 [node name="BG" type="Sprite" parent="."]
 position = Vector2( 511.951, 524.476 )
