@@ -84,6 +84,7 @@ func _attack():
 		$AnimatedSprite.play("attack")
 		if collider and "Enemy" in collider.name:
 			collider.queue_free()
+			$AudioStreamPlayer.play()
 			print(collider.name)
 	
 

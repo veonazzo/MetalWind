@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Globals/Fonts/METALORD.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://BackToMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="Credits" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1023.0
+margin_bottom = 517.0
+custom_fonts/font = SubResource( 1 )
+text = "POWERMETALDEV PRESENTS
+ROCKWIND
+
+
+BACKGROUND MUSIC:
+Metalmania by Kevin MacLeod
+Link: https://incompetech.filmmusic.io/song/4042-metalmania
+License: http://creativecommons.org/licenses/by/4.0/
+
+WIND SAMPLE:
+wind.wav sample extract is a tribute for 
+\"Black wind, fire and steel\" by Manowar
+"
+align = 1
+
+[node name="BackToMenu" type="Button" parent="."]
+margin_left = 454.565
+margin_top = 520.548
+margin_right = 605.565
+margin_bottom = 555.548
+custom_fonts/font = SubResource( 2 )
+text = "Back to menu"
+script = ExtResource( 2 )
+[connection signal="pressed" from="BackToMenu" to="BackToMenu" method="_on_BackToMenu_pressed"]
