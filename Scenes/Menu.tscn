@@ -30,13 +30,13 @@ position = Vector2( 526.439, 244.592 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 340.686
+margin_left = 329.286
 margin_top = 134.815
-margin_right = 724.686
+margin_right = 743.286
 margin_bottom = 231.815
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ROCK WIND"
+text = "METAL WIND"
 align = 1
 valign = 1
 

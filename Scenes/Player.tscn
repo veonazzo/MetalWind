@@ -9,7 +9,7 @@
 [ext_resource path="res://Asset/Player/spritesheet_metalguy_frame5_walk.png" type="Texture" id=7]
 [ext_resource path="res://Asset/Player/spritesheet_metalguy_frame6_walk.png" type="Texture" id=8]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 custom_solver_bias = 0.04
 extents = Vector2( 38.4863, 62.3106 )
 
@@ -34,7 +34,7 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 0, 0.429276 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 2 )

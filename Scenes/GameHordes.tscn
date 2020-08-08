@@ -1,92 +1,173 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://Asset/Tileset/sfondo.png" type="Texture" id=1]
-[ext_resource path="res://Asset/Tileset/stars_low_light.png" type="Texture" id=2]
-[ext_resource path="res://Asset/Tileset/stars_low_light_1.png" type="Texture" id=3]
-[ext_resource path="res://Asset/Tileset/stars_light_up.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Player.gd" type="Script" id=5]
-[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame0_walk.png" type="Texture" id=6]
-[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame3_walk.png" type="Texture" id=7]
-[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame4_walk.png" type="Texture" id=8]
-[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame2_walk.png" type="Texture" id=9]
-[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame5_walk.png" type="Texture" id=10]
-[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame6_walk.png" type="Texture" id=11]
-[ext_resource path="res://Asset/Music/wind.wav" type="AudioStream" id=12]
-[ext_resource path="res://Asset/Tileset/Objects/Tree.png" type="Texture" id=13]
-[ext_resource path="res://Asset/Music/metalmania-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=14]
+[ext_resource path="res://Scenes/GameHordes.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Tileset/sfondo.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Tileset/stars_low_light.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Tileset/stars_low_light_1.png" type="Texture" id=4]
+[ext_resource path="res://Asset/Tileset/stars_light_up.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=6]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame0_walk.png" type="Texture" id=7]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame1_guitar.png" type="Texture" id=8]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame2_guitar.png" type="Texture" id=9]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame3_guitar.png" type="Texture" id=10]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame4_guitar.png" type="Texture" id=11]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame2_walk.png" type="Texture" id=12]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame3_walk.png" type="Texture" id=13]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame4_walk.png" type="Texture" id=14]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame5_walk.png" type="Texture" id=15]
+[ext_resource path="res://Asset/Player/spritesheet_metalguy_frame6_walk.png" type="Texture" id=16]
+[ext_resource path="res://Asset/Music/wind.wav" type="AudioStream" id=17]
+[ext_resource path="res://Asset/Tileset/Objects/Tree.png" type="Texture" id=18]
+[ext_resource path="res://Asset/Music/metalmania-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=19]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=5]
+0/name = "sfondo.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 1088, 8000, 64 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "attack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 30.4653
 height = 69.8185
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4001, 25.09 )
+
+[sub_resource type="CapsuleShape2D" id=9]
 radius = 105.098
 height = 150.391
 
 [node name="GameHordes" type="Node"]
+script = ExtResource( 1 )
 
-[node name="sfondo" type="Sprite" parent="."]
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+collision_use_kinematic = true
+format = 1
+
+[node name="sfondo" type="Sprite" parent="TileMap"]
 position = Vector2( 4001.4, 571 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="stars_low_light" type="Sprite" parent="."]
-position = Vector2( 4001, 571 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="stars_low_light_1" type="Sprite" parent="."]
+[node name="stars_low_light" type="Sprite" parent="TileMap"]
 position = Vector2( 4001, 571 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="stars_light_up" type="Sprite" parent="."]
+[node name="stars_low_light_1" type="Sprite" parent="TileMap"]
 position = Vector2( 4001, 571 )
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
+[node name="stars_light_up" type="Sprite" parent="TileMap"]
+position = Vector2( 4001, 571 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 823.14, 1009.79 )
-script = ExtResource( 5 )
+position = Vector2( 826.823, 1008.56 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
-frames = SubResource( 1 )
-animation = "attack"
-frame = 1
+frames = SubResource( 6 )
+animation = "fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 2 )
+shape = SubResource( 7 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+editor/display_folded = true
 position = Vector2( 1.62903, -153.128 )
 current = true
 limit_left = 0
@@ -94,6 +175,34 @@ limit_right = 8001
 limit_bottom = 1142
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
+editor/display_folded = true
+
+[node name="TextureRect" type="TextureRect" parent="Player/Camera2D/CanvasLayer"]
+visible = false
+margin_left = 317.899
+margin_top = 575.656
+margin_right = 417.899
+margin_bottom = 707.656
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+expand = true
+
+[node name="Life1" type="Sprite" parent="Player/Camera2D"]
+position = Vector2( -485, -250 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="Life2" type="Sprite" parent="Player/Camera2D"]
+position = Vector2( -450, -250 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="Life3" type="Sprite" parent="Player/Camera2D"]
+position = Vector2( -415, -250 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
 
 [node name="TimerEnemy" type="Timer" parent="Player"]
 one_shot = true
@@ -104,7 +213,16 @@ scale = Vector2( 15, 2 )
 enabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
-stream = ExtResource( 12 )
+stream = ExtResource( 17 )
+volume_db = -5.0
+
+[node name="Area2D" type="StaticBody2D" parent="Player"]
+editor/display_folded = true
+position = Vector2( -823.14, -1009.79 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2( 4001, 1115.67 )
+shape = SubResource( 8 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 450.617, 963.114 )
@@ -115,11 +233,10 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 3 )
-disabled = true
+shape = SubResource( 9 )
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="."]
 position = Vector2( 7482.78, 953.594 )
@@ -130,12 +247,17 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D2"]
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-shape = SubResource( 3 )
-disabled = true
+shape = SubResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource( 19 )
+volume_db = -10.0
 autoplay = true
+
+[node name="TimerGame" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true
+[connection signal="game_over" from="Player" to="." method="_on_Player_game_over"]

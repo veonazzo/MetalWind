@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Black Wind"
+config/name="Metal Wind"
 run/main_scene="res://Scenes/IntroGameJam.tscn"
 config/icon="res://icon.png"
 
