@@ -8,3 +8,6 @@ PowerMetalDev (Andrea "veonazzo", Nicola "nike84", Giovanni "gippi") presenta:
 
 
 Primissima jam e primissimo gioco rilasciato, bellissima esperienza formativa.
+
+
+made with [godot engine](https://godotengine.org/) 
