@@ -105,8 +105,8 @@ func _jump():
 	else:
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
-		else: 
-            $AnimatedSprite.play("fall")
+#		else: 
+#            $AnimatedSprite.play("fall")
 	
 func movement(delta):
 	var movement = velocity.normalized()*500*delta
