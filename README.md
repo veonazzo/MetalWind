@@ -1,4 +1,5 @@
 # Metal Wind
+![MetalWind](https://img.itch.zone/aW1nLzQwMjQzNzkucG5n/347x500/sVQuIT.png)
 
 Godot Engine Italia Game Jam #2
 
